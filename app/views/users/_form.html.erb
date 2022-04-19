@@ -19,8 +19,7 @@
   %>
   </div>
   <div>
-    <%= form.label :Job, id: :job_id ,style: "display: block", value: "job_id" %> <%= form.number_field :job_id
-  %>
+    <%= select_tag "job_id", options_from_collection_for_select(Job.all, "id", "title") %>
   </div>
   <div><%= form.submit %></div>
 <% end %>
